@@ -45,8 +45,8 @@ Sensive Blog - Home
     <section class="blog-post-area section-margin mt-4">
       <div class="container">
         <div class="row">
-          {% for post in fresh_posts %}
-            <div class="col-lg-8">
+          <div class="col-lg-8">
+            {% for post in fresh_posts %}
               <div class="single-recent-blog-post">
                 <div class="thumb">
                   {% if post.image_url %}
@@ -66,8 +66,8 @@ Sensive Blog - Home
                   <a class="button" href={% url 'post_detail' slug=post.slug %}>Read More <i class="ti-arrow-right"></i></a>
                 </div>
               </div>
-            </div>
-          {% endfor %}
+            {% endfor %}
+          </div>
           <!-- Start Blog Post Siddebar -->
           <div class="col-lg-4 sidebar-widgets">
             <div class="widget-wrap">
